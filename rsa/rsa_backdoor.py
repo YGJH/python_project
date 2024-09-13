@@ -1,9 +1,9 @@
 from Crypto.Util.number import *
 import binascii
 
-ed % phi = 1
-ed = 1 + k*phi
-c ^ backdoor = (m^e) ^ (d^2*e + 7phi) = m^(e*d*d*e + e * 7phi) = m ^ ((phi-1) * (phi-1) + 7ephi) = m ^ 1
+# ed % phi = 1
+# ed = 1 + k*phi
+# c ^ backdoor = (m^e) ^ (d^2*e + 7phi) = m^(e*d*d*e + e * 7phi) = m ^ ((phi-1) * (phi-1) + 7ephi) = m ^ 1
 
 def egcd(a, b):
     if a==0:
@@ -19,7 +19,6 @@ def modinv(b, n):
 
 # encrypt
 flag = "flag{asd_is_gay}"
-# print(flag)
 bytearray_flag = flag.encode()
 hex_array = binascii.hexlify(bytearray_flag)
 # print(hex_array)
