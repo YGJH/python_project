@@ -33,6 +33,7 @@ def get_key():
     d = modinv(e , phi)
     return n , e , d , phi
 n , e, d, phi = get_key()
+
 while e*d % phi != 1:
     n , e, d, phi = get_key()
 
