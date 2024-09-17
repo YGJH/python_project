@@ -1,4 +1,0 @@
-pillow>=8.2.0
-pycipher>=0.5.2
-pycrypto>=2.6.1
-sympy>=1.4
