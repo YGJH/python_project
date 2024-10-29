@@ -1,0 +1,1 @@
+{"name":"Local: formmat","url":"c:\\Users\\jihut\\Desktop\\python\\python2024\\string\\formmat.py","tests":[{"id":1727070373893,"input":"abc\n123456789\n15\n-","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jihut\\Desktop\\python\\python2024\\string\\formmat.py","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: eval","url":"c:\\Users\\jihut\\Desktop\\python\\python2024\\string\\eval.py","tests":[{"id":1727076690997,"input":"x<-3\ny<-1\nz<-(x+y)*5/x\nprint(z)\nbye()","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jihut\\Desktop\\python\\python2024\\string\\eval.py","group":"local","local":true}
