@@ -1,6 +1,4 @@
 import sys
-# ev = []
-# od = []
 evv = 0
 odd = 0
 for line in sys.stdin:
