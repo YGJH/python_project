@@ -14,5 +14,5 @@ ciph = pow(flag, key.e, key.n)
 
 print(f'n = {n}')
 print(f'e = {e}')
-print(f'leak = {leak}')
+print(f'(p**2 + q**2 - p - q)%key.n = {leak}')
 print(f'ciph = {long_to_bytes(ciph)}')

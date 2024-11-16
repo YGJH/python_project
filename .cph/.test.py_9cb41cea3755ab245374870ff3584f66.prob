@@ -1,1 +1,1 @@
-{"name":"Local: test","url":"c:\\Users\\jihut\\Desktop\\python\\test.py","tests":[{"id":1728299390550,"input":"AABBCC","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jihut\\Desktop\\python\\test.py","group":"local","local":true}
+{"name":"Local: test","url":"c:\\Users\\jihut\\Desktop\\python\\test.py","tests":[{"id":1728299390550,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\jihut\\Desktop\\python\\test.py","group":"local","local":true}

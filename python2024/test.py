@@ -1,17 +1,29 @@
-import copy
-
-def call_by_value(func):
-    def wrapper(*args, **kwargs):
-        return func(*[copy.deepcopy(arg) for arg in args],  #1
-                    **{k: copy.deepcopy(v) for k, v in kwargs.items()})  #2, #3
-    return wrapper
-
-# Usage example
-@call_by_value
-def modify_list(my_list):
-    my_list.append(4)
-    print("Inside function:", my_list) 
-
-original_list = [1, 2, 3]
-modify_list(original_list)
-print("Outside function:", original_list)
+def g(data, batch_size):
+    buffer = []
+    total_samples = len(data) * 4
+    d = 0  
+    for b in data:
+        buffer.extend([
+            b,
+            b[::-1],
+            b[len(b)//2:] + b[:len(b)//2],
+            b[1:len(b)-1]
+        ])
+        
+        while len(buffer) >= batch_size:
+            yield tuple(buffer[:batch_size])
+            buffer = buffer[batch_size:]
+            d += batch_size
+            if d >= total_samples:
+                return  
+    if buffer:
+        while len(buffer) < batch_size:
+            for b in data:
+                if len(buffer) < batch_size:
+                    buffer.extend([
+                        b,
+                        b[::-1],
+                        b[len(b)//2:] + b[:len(b)//2],
+                        b[1:len(b)-1]
+                    ])
+        yield tuple(buffer[:batch_size])
