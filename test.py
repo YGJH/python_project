@@ -1,57 +1,8 @@
-import threading
- 
-def my_proc(data):
-    for _ in range(100000):
-        for i in range(len(data)):
-          data[i] = data[i] + 1
+# example.py
+import ddddocr
 
-def my_proc2(data):
-    for i in range(len(data)//2):
-        for _ in range(100000):
-            x       = data[i] + 1
-            for _ in range(1):
-                pass
-            data[i] = x
-                
-    for i in range(len(data)//2,len(data)):
-        for _ in range(100000):
-            x       = data[i] + 1
-            for _ in range(1):
-                pass
-            data[i] = x
+ocr = ddddocr.DdddOcr(beta=True)  # 切换为第二套ocr模型
 
-
-for round in range(5):
-    print(f'round {round}')
-    data = [1,2,3,4]
-    
-    thread_lst = [threading.Thread(target=my_proc,args=(data,)) for _ in range(25)]
-
-    for t in thread_lst:
-        t.start()
-
-    for t in thread_lst:
-        t.join()
-
-    print(data)
-    
-print('-'*20)
-
-
-for round in range(5):
-    print(f'round {round}')
-    data = [1,2,3,4]
-
-    thread_lst = [threading.Thread(target=my_proc2,args=(data,)) for _ in range(25)]
-
-    for t in thread_lst:
-        t.start()
-
-    for t in thread_lst:
-        t.join()
-
-    print(data)
-
-
-
-
+image = open("Screenshot 2025-01-13 121807.png", "rb").read()
+result = ocr.classification(image)
+print(result)
